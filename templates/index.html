@@ -7,13 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <input name="nota1" id="nota1" />
-        <input name="nota2" id="nota2" />
-        <button type="submit">Bruh</button>
+    <form action="" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 1rem;">
+        <p style="font-weight: bold; font-size: 2rem">Insira as notas do aluno para calcular sua media</p>
+        <div>
+            <label for="nota1">Nota 1</label>
+            <input name="nota1" id="nota1" />
+        </div>
+        <div>
+            <label for="nota2">Nota 2</label>
+            <input name="nota2" id="nota2" />
+        </div>
+        <button type="submit">Enviar Notas</button>
     </form>
-    {% if stringBrabg %}
-        {{ stringBrabg }}
+    {% if situacao %}
+        <div style="display: flex; justify-content: center; align-items: center; margin: 16px 0; flex-direction: column;">
+            <div>Nota 1: {{nota1}}</div>
+            <div>Nota 2:{{nota2}}</div>
+            <div>Media:{{media}}</div>
+            <div>Situacao: {{situacao}}</div>
+        </div>
     {% endif %}
 </body>
 </html>
